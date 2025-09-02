@@ -66,4 +66,3 @@ Start everything with Docker:
 ```bash
 docker compose up -d
 
----
