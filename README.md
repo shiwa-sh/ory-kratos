@@ -67,9 +67,3 @@ Start everything with Docker:
 docker compose up -d
 
 ---
-
-### 2. Environment variables
-First, create a `.env` file by copying the sample and updating it with your own values:  
-
-```bash
-cp env.sample .env
