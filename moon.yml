@@ -1,0 +1,19 @@
+$schema: 'https://moonrepo.dev/schemas/project.json'
+
+project:
+  name: 'ory-kratos'
+  description: 'Self-hosted Ory Kratos with Docker'
+
+
+tasks:
+  docker:
+    command: 'docker build -t ghcr.io/backtickgroup/custom-$project:latest .'
+    inputs:
+      - 'Dockerfile'
+
+  publish:
+    command: 'docker push ghcr.io/backtickgroup/custom-$project:latest'
+    inputs:
+      - 'Dockerfile'
+    deps:
+      - '~:docker'
